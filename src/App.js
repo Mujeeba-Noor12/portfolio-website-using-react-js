@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
+import './tailwind-output.css'; 
+import './index.css';
+import Particles from "react-tsparticles";
+import particlesConfig from './utils/Particles';  
+import Home from './container/Home.js';
+import About from './container/About.js';
+
+import Skills from './container/Skills.js';
+import Contact from './container/Contact.js';
+import Portfolio from './container/Portfolio.js';
+import Navbar from './Components/Navbar.js';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+    <div style={{position:'relative'}}>
+      
+      
+      <Particles id='particle' options={particlesConfig} />
+      <Navbar />
+      
+     
+      
+      <Routes>
+        <Route index path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+    
+        <Route path='/skills' element={<Skills />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
+

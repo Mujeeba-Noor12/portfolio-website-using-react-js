@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  
+  --yellow-theme-background-color: black;
+  --yellow-theme-main-color: #1E90FF; /* Blue shade */
+  --yellow-theme-sub-text-color: white;
+  --nav-background-color: black;
 }
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+  /* scroll-behavior: smooth; */
+}
+html{
+  height: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body{
+  background: white;
+  /* background: var(--yellow-theme-background-color); */
+  height:100%;
+  overflow-x: hidden;
+}
+#root{
+  height:100%;
+}
+#particle {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;  /* This keeps the particles in the background */  
+} 
